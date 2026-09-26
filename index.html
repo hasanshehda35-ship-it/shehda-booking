@@ -54,7 +54,7 @@ function book(){
  const data={name,phone,car,plate,date,time:chosenSlot,note:document.getElementById("note").value,category:cat(),services:services.filter(s=>selected.has(s.id)).map(s=>({name:s.name,price:s[cat()]}))};
  data.total=data.services.reduce((a,s)=>a+s.price,0); data.source="SHEHDA Online"; data.createdAt=new Date().toISOString();
  // Replace this URL with your deployed Google Apps Script Web App URL.
- const ENDPOINT="https://script.google.com/macros/s/AKfycbwZviNf-60Or67NX0F6uZdgg6RmRZF3G3gK_qHIEzUbzT_-C-rjGwRUfw3_nS3S5F7S/exec";
+ const ENDPOINT="https://script.google.com/macros/s/AKfycbwy7dC_sbkxabMgvo-2NBzUZ7IV_WIL8_vrSoEqQwEHT2GHslcofHLgw0FJaeAWzYBb/exec";
  if(ENDPOINT.includes("PASTE_")){
    alert("الواجهة جاهزة، لكن ربطها بقاعدة البيانات يحتاج وضع رابط Web App الخاص بـ SHEHDA في إعدادات النظام. تم تجهيز ملف الربط ضمن الحزمة.");
    return;
